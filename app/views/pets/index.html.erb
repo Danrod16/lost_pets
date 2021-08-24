@@ -1,0 +1,28 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Lost Pets</h1>
+    <p>Change your pet and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+<div class="container">
+  <h2>Your pets!!</h2>
+  <% @pets.each do |pet| %>
+    <%= link_to pet_path(pet) do %>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2><%= pet.name %></h2>
+      <p>    <%= pet.city %> - <%= pet.species %></p>
+      <br>
+      <%= pet.found_on %>
+      <br>
+      <%= pet.city %> - <%= pet.species %>
+    </div>
+  </div>
+    <% end %>
+  <% end %>
+</div>
+
+
+
